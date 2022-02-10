@@ -5,7 +5,7 @@ import pprint
 import click
 from jsondiff import diff
 
-API_KEY = 'YOUR_API_KEY'
+API_KEY = os.environ.get('MERAKI_DASHBOARD_API')
 
 dashboard = meraki.DashboardAPI(API_KEY)
 
